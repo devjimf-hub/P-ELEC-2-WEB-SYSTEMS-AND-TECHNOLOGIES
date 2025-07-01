@@ -1,0 +1,267 @@
+{
+    "title": "CSS Mastery: From Basics to Advanced",
+    "description": "Complete guide to Cascading Style Sheets including fundamentals, advanced techniques, and responsive design",
+    "author": "Jimf Bocales",
+    "thumbnail": "Assets/p1.jpg",
+    "slides": [
+        {
+            "type": "title",
+            "title": "CSS Mastery",
+            "subtitle": "From Basics to Advanced Techniques",
+            "content": "A complete journey through styling the web",
+            "footer": "Presented by Jimf Bocales"
+        },
+        {
+            "type": "content",
+            "title": "CSS Introduction",
+            "content": "Cascading Style Sheets define presentation of HTML documents",
+            "list": [
+                "🎨 Controls layout, colors, fonts",
+                "🚀 Separates content (HTML) from presentation",
+                "🔄 Multiple styles cascade into one",
+                "📝 Written in rule-based syntax"
+            ],
+            "image": "https://example.com/images/css-concept.png"
+        },
+        {
+            "type": "content",
+            "title": "CSS Types",
+            "content": "Different ways to apply CSS styles",
+            "list": [
+                "1. Inline (style attribute)",
+                "2. Internal (style in head)",
+                "3. External (.css files)",
+                "4. Imported (@import)"
+            ],
+            "footer": "Best practice: Use external stylesheets for maintainability"
+        },
+        {
+            "type": "code",
+            "title": "CSS Syntax",
+            "description": "The structure of CSS rules:",
+            "code": "selector {\n    property: value;\n    /* This is a comment */\n}",
+            "footer": "Selector targets HTML elements, properties define styling"
+        },
+        {
+            "type": "content",
+            "title": "CSS Selectors",
+            "content": "Patterns that select elements to style",
+            "list": [
+                "Element (p, h1)",
+                "Class (.menu-item)",
+                "ID (#header)",
+                "Attribute (a[target])",
+                "Pseudo-class (:hover)"
+            ],
+            "image": "https://example.com/images/css-selectors.png"
+        },
+        {
+            "type": "code",
+            "title": "Selector Example",
+            "description": "Different selector types in action:",
+            "code": "/* Element selector */\np { color: blue; }\n\n/* Class selector */\n.highlight { background: yellow; }\n\n/* ID selector */\n#main-title { font-size: 2em; }\n\n/* Pseudo-class */\nbutton:hover { cursor: pointer; }",
+            "footer": "Specificity determines which styles get applied"
+        },
+        {
+            "type": "content",
+            "title": "CSS Comments & Colors",
+            "content": "Documenting styles and defining colors",
+            "list": [
+                "/* Comment syntax */",
+                "Named colors (red, blue)",
+                "HEX (#ff0000)",
+                "RGB (rgb(255,0,0))",
+                "HSL (hsl(0,100%,50%))"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Color Examples",
+            "description": "Different color notation methods:",
+            "code": ".color-examples {\n    color: red;               /* Named */\n    background: #00ff00;      /* HEX */\n    border-color: rgb(0,0,255); /* RGB */\n    outline-color: hsl(120,100%,50%); /* HSL */\n}",
+            "footer": "HEX is most common for web design"
+        },
+        {
+            "type": "content",
+            "title": "CSS Advanced: Transitions",
+            "content": "Smoothly animate property changes",
+            "list": [
+                "🌊 Creates gradual changes",
+                "⏱️ Controls timing and duration",
+                "🔄 Works with state changes (like :hover)",
+                "🚀 Hardware accelerated for performance"
+            ],
+            "image": "https://example.com/images/css-transitions.png"
+        },
+        {
+            "type": "code",
+            "title": "Transition Example",
+            "description": "Smooth color change on hover:",
+            "code": "button {\n    background: blue;\n    transition: background 0.5s ease;\n}\n\nbutton:hover {\n    background: darkblue;\n}",
+            "footer": "Always specify both the property and duration"
+        },
+        {
+            "type": "content",
+            "title": "CSS Animations",
+            "content": "Create complex multi-stage animations",
+            "list": [
+                "🎬 Define with @keyframes",
+                "⏱️ Control timing, delay, iteration",
+                "🔄 Can run infinitely",
+                "🚀 Better for complex sequences than transitions"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Animation Example",
+            "description": "Simple bounce animation:",
+            "code": "@keyframes bounce {\n    0%, 100% { transform: translateY(0); }\n    50% { transform: translateY(-20px); }\n}\n\n.element {\n    animation: bounce 2s infinite;\n}",
+            "footer": "Use sparingly for optimal performance"
+        },
+        {
+            "type": "content",
+            "title": "CSS Effects",
+            "content": "Visual enhancements for elements",
+            "list": [
+                "🌑 Box-shadow for depth",
+                "🌈 Gradients for smooth color transitions",
+                "🎭 Blend modes for creative effects",
+                "🖼️ Filters (blur, contrast, etc.)"
+            ],
+            "image": "https://example.com/images/css-effects.png"
+        },
+        {
+            "type": "content",
+            "title": "CSS Responsive: Viewport",
+            "content": "Adapting to different screen sizes",
+            "list": [
+                "📱 Essential for mobile devices",
+                "⚙️ Set with <meta> tag in HTML",
+                "📏 Controls initial zoom level",
+                "🔄 Works with media queries"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Viewport Meta Tag",
+            "description": "Essential for responsive design:",
+            "code": "meta name=\"viewport\" \ncontent=\"width=device-width, initial-scale=1.0\"",
+            "footer": "Always include in your HTML head"
+        },
+        {
+            "type": "content",
+            "title": "CSS Grid View",
+            "content": "Two-dimensional layout system",
+            "list": [
+                "📐 Define rows and columns",
+                "🔲 Place items precisely",
+                "🚀 Powerful alternative to floats",
+                "🔄 Works great with media queries"
+            ],
+            "image": "https://example.com/images/css-grid.png"
+        },
+        {
+            "type": "content",
+            "title": "Media Queries",
+            "content": "Conditional styling based on device",
+            "list": [
+                "📱 Apply different styles at breakpoints",
+                "📏 Common targets: width, height, orientation",
+                "🖥️ Create device-specific layouts",
+                "🌈 Change colors, fonts, spacing"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Media Query Example",
+            "description": "Mobile-first responsive design:",
+            "code": "/* Default (mobile) styles */\n.container { padding: 10px; }\n\n/* Tablet */\n@media (min-width: 768px) {\n    .container { padding: 20px; }\n}\n\n/* Desktop */\n@media (min-width: 1024px) {\n    .container { padding: 30px; }\n}",
+            "footer": "Mobile-first approach is recommended"
+        },
+        {
+            "type": "content",
+            "title": "Responsive Images & Video",
+            "content": "Adapting media to different screens",
+            "list": [
+                "🖼️ srcset for resolution switching",
+                "📏 max-width: 100% for fluid images",
+                "🎥 Aspect ratio boxes for video",
+                "⚡ Optimize file sizes for performance"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "CSS Frameworks & Templates",
+            "content": "Pre-built solutions for faster development",
+            "list": [
+                "🚀 Bootstrap - Most popular",
+                "🎨 Tailwind - Utility-first",
+                "🔄 Foundation - Enterprise-ready",
+                "📐 Bulma - Flexbox-based"
+            ],
+            "image": "https://example.com/images/css-frameworks.png"
+        },
+        {
+            "type": "content",
+            "title": "CSS Grid Layout",
+            "content": "Modern two-dimensional layout system",
+            "list": [
+                "📐 Define grid container",
+                "🔳 Place grid items",
+                "📏 Control with rows and columns",
+                "🚀 Powerful alternative to floats"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Grid Container",
+            "description": "Setting up a basic grid:",
+            "code": ".container {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr;\n    grid-gap: 20px;\n}",
+            "footer": "fr units distribute available space"
+        },
+        {
+            "type": "content",
+            "title": "Grid Items",
+            "content": "Positioning elements within the grid",
+            "list": [
+                "📍 grid-column/grid-row positioning",
+                "🔲 span multiple tracks",
+                "🔄 Named template areas",
+                "🚀 Responsive without media queries"
+            ],
+            "image": "https://example.com/images/grid-items.png"
+        },
+        {
+            "type": "code",
+            "title": "Grid Item Example",
+            "description": "Positioning items in the grid:",
+            "code": ".header {\n    grid-column: 1 / 4;\n}\n\n.sidebar {\n    grid-row: 2 / 4;\n}\n\n.main {\n    grid-column: 2 / 4;\n}",
+            "footer": "Line numbers start at 1 (not 0)"
+        },
+        {
+            "type": "content",
+            "title": "CSS Best Practices",
+            "content": "Guidelines for maintainable styles",
+            "list": [
+                "✅ Use semantic class names",
+                "✅ Organize with methodologies (BEM)",
+                "✅ Mobile-first approach",
+                "✅ Optimize for performance",
+                "✅ Comment complex sections"
+            ],
+            "footer": "CSS is art and engineering combined"
+        },
+        {
+            "type": "content",
+            "title": "Conclusion",
+            "content": "You now have CSS superpowers!",
+            "list": [
+                "🎨 From basic styling to advanced effects",
+                "📱 Responsive design techniques",
+                "📐 Modern layout systems",
+                "🚀 Performance considerations"
+            ],
+            "footer": "Go forth and style beautifully!"
+        }
+    ]
+}

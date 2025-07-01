@@ -1,0 +1,291 @@
+{
+    "title": "Web APIs & Server-side Fundamentals",
+    "description": "Complete guide to JavaScript Web APIs and introduction to server-side programming with PHP",
+    "author": "Jimf Bocales",
+    "thumbnail": "Assets/p1.jpg",
+    "slides": [
+        {
+            "type": "title",
+            "title": "Web APIs & Server-side Basics",
+            "subtitle": "Client-side Power and Server-side Magic",
+            "content": "Master JavaScript Web APIs and PHP fundamentals",
+            "footer": "Presented by Jimf Bocales"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Web APIs",
+            "content": "Browser-provided interfaces for powerful features",
+            "list": [
+                "⚡ Extend JavaScript's capabilities in the browser",
+                "🌐 Communicate with servers and services",
+                "💾 Store data client-side",
+                "📱 Access device capabilities",
+                "🔧 Over 100+ specialized APIs available"
+            ],
+            "image": "https://example.com/images/web-apis.png"
+        },
+        {
+            "type": "content",
+            "title": "Forms API",
+            "content": "Enhanced form handling and validation",
+            "list": [
+                "✅ Constraint Validation API",
+                "📌 FormData object for easy submission",
+                "🔄 Form events and methods",
+                "💡 Accessible through HTMLFormElement"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "FormData Example",
+            "description": "Capturing and submitting form data:",
+            "code": "const form = document.getElementById('myForm');\n\nform.addEventListener('submit', (e) => {\n    e.preventDefault();\n    \n    const formData = new FormData(form);\n    \n    // Log form values\n    for (let [name, value] of formData) {\n        console.log(`${name}: ${value}`);\n    }\n    \n    // Submit via fetch\n    fetch('/submit', {\n        method: 'POST',\n        body: formData\n    });\n});",
+            "footer": "FormData works perfectly with the Fetch API"
+        },
+        {
+            "type": "content",
+            "title": "History API",
+            "content": "Manipulate browser history without page reloads",
+            "list": [
+                "🔄 pushState() - Add history entry",
+                "📌 replaceState() - Modify current entry",
+                "🎯 popstate event - Detect navigation",
+                "💡 Essential for single-page applications"
+            ],
+            "image": "https://example.com/images/history-api.png"
+        },
+        {
+            "type": "code",
+            "title": "History API Example",
+            "description": "Creating a single-page application route:",
+            "code": "// Change URL without reload\nhistory.pushState({page: 1}, \"Title 1\", \"/page1\");\n\n// Handle back/forward navigation\nwindow.addEventListener('popstate', (event) => {\n    console.log(\"Navigated to:\", event.state.page);\n    loadContent(event.state.page);\n});\n\nfunction loadContent(page) {\n    // Load content based on page state\n}",
+            "footer": "This enables smooth navigation in SPAs"
+        },
+        {
+            "type": "content",
+            "title": "Storage API",
+            "content": "Client-side data storage options",
+            "list": [
+                "📦 localStorage - Persistent storage",
+                "🏷️ sessionStorage - Tab-specific storage",
+                "🔒 Storage is origin-specific",
+                "💾 Simple key-value pair system"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Storage Examples",
+            "description": "Using localStorage and sessionStorage:",
+            "code": "// Store data\nlocalStorage.setItem('username', 'john_doe');\nsessionStorage.setItem('tempData', '123');\n\n// Retrieve data\nconst user = localStorage.getItem('username');\n\n// Remove data\nlocalStorage.removeItem('username');\n\n// Clear all\nlocalStorage.clear();",
+            "footer": "Storage limit is typically 5-10MB per origin"
+        },
+        {
+            "type": "content",
+            "title": "Web Workers API",
+            "content": "Run scripts in background threads",
+            "list": [
+                "🧵 Offload CPU-intensive tasks",
+                "🚀 Prevent UI freezing",
+                "📨 Communicate via messages",
+                "🔒 No DOM access (thread-safe)"
+            ],
+            "image": "https://example.com/images/web-workers.png"
+        },
+        {
+            "type": "code",
+            "title": "Worker Example",
+            "description": "Using a worker for heavy computation:",
+            "code": "// main.js\nconst worker = new Worker('worker.js');\n\n// Send data to worker\nworker.postMessage({data: largeDataSet});\n\n// Receive result\nworker.onmessage = (e) => {\n    console.log('Result:', e.data);\n};\n\n// worker.js\nself.onmessage = (e) => {\n    const result = processData(e.data);\n    self.postMessage(result);\n};",
+            "footer": "Workers are perfect for image processing, crypto, etc."
+        },
+        {
+            "type": "content",
+            "title": "Fetch API",
+            "content": "Modern network requests interface",
+            "list": [
+                "🌐 Replacement for XMLHttpRequest",
+                "💎 Promise-based",
+                "📡 Supports all HTTP methods",
+                "🔧 Request/Response objects"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Fetch Examples",
+            "description": "Making GET and POST requests:",
+            "code": "// Simple GET request\nfetch('https://api.example.com/data')\n    .then(response => response.json())\n    .then(data => console.log(data))\n    .catch(error => console.error('Error:', error));\n\n// POST request with JSON\nfetch('https://api.example.com/save', {\n    method: 'POST',\n    headers: {'Content-Type': 'application/json'},\n    body: JSON.stringify({name: 'John', age: 30})\n});",
+            "footer": "Always handle errors in fetch requests"
+        },
+        {
+            "type": "content",
+            "title": "Geolocation API",
+            "content": "Access user's geographical location",
+            "list": [
+                "📍 getCurrentPosition() - One-time location",
+                "🔄 watchPosition() - Track movement",
+                "🌍 Returns latitude/longitude",
+                "🔒 Requires user permission"
+            ],
+            "image": "https://example.com/images/geolocation.png"
+        },
+        {
+            "type": "code",
+            "title": "Geolocation Example",
+            "description": "Getting user position:",
+            "code": "if ('geolocation' in navigator) {\n    navigator.geolocation.getCurrentPosition(\n        (position) => {\n            console.log('Latitude:', position.coords.latitude);\n            console.log('Longitude:', position.coords.longitude);\n        },\n        (error) => {\n            console.error('Error:', error.message);\n        }\n    );\n} else {\n    console.log('Geolocation not supported');\n}",
+            "footer": "Always check for feature support first"
+        },
+        {
+            "type": "content",
+            "title": "Server-side Basics",
+            "content": "How the backend works",
+            "list": [
+                "🖥️ Runs on web servers (not browsers)",
+                "📦 Processes requests and returns responses",
+                "🔒 Handles databases and security",
+                "🌐 Common languages: PHP, Node.js, Python, etc."
+            ]
+        },
+        {
+            "type": "content",
+            "title": "URLs and Web Servers",
+            "content": "How requests reach your server",
+            "list": [
+                "🌍 URL structure: protocol://domain/path?query",
+                "📡 DNS translates domains to IP addresses",
+                "🖥️ Web server software (Apache, Nginx, etc.)",
+                "🔄 Server processes request and returns response"
+            ],
+            "image": "https://example.com/images/web-server.png"
+        },
+        {
+            "type": "content",
+            "title": "Server-side Web Programming",
+            "content": "Backend development fundamentals",
+            "list": [
+                "📡 Handling HTTP requests (GET, POST, etc.)",
+                "💾 Database interactions",
+                "🔐 Authentication and security",
+                "📦 Session management",
+                "⚡ Performance optimization"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "PHP Introduction",
+            "content": "Popular server-side scripting language",
+            "list": [
+                "🐘 PHP: Hypertext Preprocessor",
+                "🚀 Runs on 79% of all websites",
+                "💡 Embedded in HTML",
+                "📂 Files end with .php extension"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "PHP Basic Syntax",
+            "description": "PHP code structure:",
+            "code": " \n// PHP code goes here\necho \"Hello World!\";\n\n// Variables start with $\n$name = \"John\";\n$age = 30;\n\n// Constants\ndefine(\"PI\", 3.14159);\n",
+            "footer": "PHP code must be within <?php ?> tags"
+        },
+        {
+            "type": "content",
+            "title": "PHP Console Usage",
+            "content": "Running PHP from command line",
+            "list": [
+                "💻 php -a (interactive shell)",
+                "📜 php file.php (run script)",
+                "🔄 Great for scripts and testing",
+                "🚀 No web server needed"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "PHP Variables",
+            "description": "Variable usage in PHP:",
+            "code": "\n// Variables\n$name = \"Alice\";  // String\n$count = 15;      // Integer\n$price = 4.99;    // Float\n$is_active = true; // Boolean\n\n// Variable variables\n$$name = \"Bob\";   // Creates $Alice\n\n// Output\necho \"Hello $name\";  // Hello Alice\n",
+            "footer": "PHP is loosely typed (no type declarations needed)"
+        },
+        {
+            "type": "content",
+            "title": "PHP Operators",
+            "content": "Performing operations in PHP",
+            "list": [
+                "➕ Arithmetic: +, -, *, /, %",
+                "🔄 Assignment: =, +=, -=, etc.",
+                "🤔 Comparison: ==, ===, !=, !==, etc.",
+                "🔀 Logical: &&, ||, !",
+                "🎯 String: . (concatenation)"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Operator Examples",
+            "description": "Common PHP operators:",
+            "code": "\n// Arithmetic\n$sum = 10 + 5;  // 15\n\n// Comparison\n$isEqual = (5 == '5');  // true (loose)\n$isIdentical = (5 === '5'); // false (strict)\n\n// String concatenation\n$greeting = \"Hello \" . \"World!\";\n\n// Ternary operator\n$message = ($age >= 18) ? \"Adult\" : \"Minor\";\n",
+            "footer": "Use === for strict type comparisons"
+        },
+        {
+            "type": "content",
+            "title": "PHP Comments",
+            "content": "Documenting your PHP code",
+            "list": [
+                "// Single-line comment",
+                "# Also single-line (less common)",
+                "/* Multi-line comment */",
+                "/** DocBlock for documentation */"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Comment Examples",
+            "description": "Different comment styles:",
+            "code": "\n// This is a single-line comment\n\n# This is also single-line\n\n/*\nThis is a multi-line\ncomment spanning\nseveral lines\n*/\n\n/**\n * DocBlock comment\n * @param string $name\n * @return string\n */\nfunction greet($name) {\n    return \"Hello $name\";\n}\n",
+            "footer": "Good comments explain why, not what"
+        },
+        {
+            "type": "content",
+            "title": "PHP Strings",
+            "content": "Working with text in PHP",
+            "list": [
+                "📜 Single-quoted ('literal')",
+                "📌 Double-quoted (\"parsed\")",
+                "💎 Heredoc (<<<) for multi-line",
+                "🔤 Nowdoc (<<<') for raw multi-line"
+            ],
+            "image": "https://example.com/images/php-strings.png"
+        },
+        {
+            "type": "code",
+            "title": "String Examples",
+            "description": "Different string syntaxes:",
+            "code": "\n// Single-quoted\n$single = 'Simple string';\n\n// Double-quoted (variables parsed)\n$double = \"Hello $name\";\n\n// Heredoc\n$heredoc = \"<<<\"EOT\nMulti-line\nstring with \"quotes\"\nand variables: $name\nEOT;\n\n// Nowdoc\n$nowdoc = \"<<<\"'EOT'\nRaw multi-line\nno parsing of $variables\nEOT;\n",
+            "footer": "Heredoc/Nowdoc are great for HTML templates"
+        },
+        {
+            "type": "content",
+            "title": "Best Practices",
+            "content": "Writing quality PHP and JavaScript",
+            "list": [
+                "✅ Validate all user input",
+                "✅ Sanitize output (prevent XSS)",
+                "✅ Use prepared statements for databases",
+                "✅ Follow PSR standards (PHP)",
+                "✅ Modularize your code"
+            ],
+            "footer": "Security should always be a priority"
+        },
+        {
+            "type": "content",
+            "title": "Conclusion",
+            "content": "You now understand Web APIs and PHP basics!",
+            "list": [
+                "🌐 Client-side Web APIs for powerful features",
+                "🖥️ Server-side processing fundamentals",
+                "🐘 PHP syntax and basic programming",
+                "🚀 Foundation for full-stack development"
+            ],
+            "footer": "Go build something amazing!"
+        }
+    ]
+}

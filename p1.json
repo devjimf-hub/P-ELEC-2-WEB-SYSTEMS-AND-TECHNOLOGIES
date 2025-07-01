@@ -1,0 +1,252 @@
+{
+    "title": "Understanding the Internet, Web & HTML",
+    "description": "A beginner-friendly guide to web technologies covering internet fundamentals, HTML, forms, and media",
+    "author": "Jimf Bocales",
+    "thumbnail": "Assets/p1.jpg",
+    "slides": [
+        {
+            "type": "title",
+            "title": "The Internet & Web Technologies",
+            "subtitle": "A Beginner's Guide",
+            "content": "Learn how the internet works and how websites are built",
+            "footer": "Presented by Jimf Bocales"
+        },
+        {
+            "type": "content",
+            "title": "What is the Internet?",
+            "content": "The global network connecting computers worldwide",
+            "list": [
+                "🌐 Like a super-highway for information",
+                "💻 Allows computers to communicate",
+                "📡 Uses cables, satellites, and wireless",
+                "📦 Sends data in small packets"
+            ],
+            "image": "https://example.com/images/internet-map.png"
+        },
+        {
+            "type": "video",
+            "title": "The Internet",
+            "content": "The global network connecting computers worldwide",
+            "video": "https://www.youtube.com/watch?v=x3c1ih2NJEg",
+            "footer": "Watch this video to understand the internet's structure"
+        },
+        {
+            "type": "content",
+            "title": "World Wide Web vs Internet",
+            "content": "Key differences between these related but distinct concepts",
+            "list": [
+                "Internet = The physical network (like roads)",
+                "WWW = Information on the network (like cars)",
+                "Web uses websites with hyperlinks",
+                "Invented by Tim Berners-Lee in 1989"
+            ],
+            "footer": "Think of internet as library building, web as books inside!"
+        },
+        {
+            "type": "content",
+            "title": "How the Web Works",
+            "content": "The journey of a web request",
+            "list": [
+                "1. You type a web address (URL)",
+                "2. Your computer asks a DNS server",
+                "3. Finds the website's computer (server)",
+                "4. Server sends back web pages",
+                "5. Your browser shows the pages"
+            ],
+            "image": "https://example.com/images/web-request.png"
+        },
+        {
+            "type": "content",
+            "title": "HTML - Building Blocks of Websites",
+            "content": "HyperText Markup Language structures web pages",
+            "list": [
+                "🏗️ The skeleton of web pages",
+                "🔖 Uses tags like <‎h1‎>, <‎p‎>, <‎img‎>",
+                "📝 Plain text files with .html extension",
+                "🌐 Originally for scientific documents"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "HTML Document Structure",
+            "description": "Basic template every HTML page follows:",
+            "code": "<‎!DOCTYPE html‎>\n<‎html‎>\n<‎head‎>\n  <‎title‎>My Page<‎/title‎>\n<‎/head‎>\n<‎body‎>\n  <‎h1‎>Hello World!<‎/h1‎>\n  <‎p‎>My first web page.<‎/p‎>\n<‎/body‎>\n<‎/html‎>",
+            "footer": "This simple structure powers billions of web pages"
+        },
+        {
+            "type": "content",
+            "title": "HTML Elements & Tags",
+            "content": "The components that make up HTML documents",
+            "list": [
+                "Element = Complete component (<‎p‎>...<‎/p‎>)",
+                "Tag = Markers that begin (<‎p>) and end (<‎/p‎>)",
+                "Attribute = Extra info (href in <‎a‎>)",
+                "Most elements have opening/closing tags"
+            ],
+            "image": "Assets/p1.jpg"
+        },
+        {
+            "type": "content",
+            "title": "Basic HTML Tags",
+            "content": "Essential tags every beginner should know",
+            "list": [
+                "<‎h1‎>-<‎h6‎> = Headings (big to small)",
+                "<‎p‎> = Paragraphs of text",
+                "<‎a‎> = Links to other pages",
+                "<‎img‎> = Embeds images",
+                "<‎ul‎>/<‎ol‎> = Lists (unordered/ordered)",
+                "<‎div‎> = Content containers"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "HTML Text Formatting",
+            "content": "Tags that change how text appears",
+            "list": [
+                "<‎strong‎> = Important text (bold)",
+                "<‎em‎> = Emphasized text (italic)",
+                "<‎mark‎> = Highlighted text",
+                "<‎small‎> = Smaller text",
+                "<‎del‎> = Deleted text",
+                "<‎sup‎>/<‎sub‎> = Super/Subscript"
+            ],
+            "footer": "Modern HTML focuses on meaning, not just appearance"
+        },
+        {
+            "type": "content",
+            "title": "HTML Tables",
+            "content": "Organizing data in rows and columns",
+            "list": [
+                "<‎table‎> = Whole table container",
+                "<‎tr‎> = Table row",
+                "<‎td‎> = Table data cell",
+                "<‎th‎> = Header cell",
+                "Used for data, not page layout!"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Table Example",
+            "description": "Proper structure for tabular data:",
+            "code": "<‎table‎>\n  <‎tr‎>\n    <‎th‎>Month<‎/th‎>\n    <‎th‎>Savings<‎/th‎>\n  <‎/tr‎>\n  <‎tr‎>\n    <‎td‎>January<‎/td‎>\n    <‎td‎>$100<‎/td‎>\n  <‎/tr‎>\n</‎>",
+            "footer": "Tables should only be used for actual data tables"
+        },
+        {
+            "type": "content",
+            "title": "HTML Images",
+            "content": "Adding visual elements to web pages",
+            "list": [
+                "🖼️ Uses <‎img‎> tag (self-closing)",
+                "📍 Requires src (source) attribute",
+                "📝 Needs alt (description) for accessibility",
+                "📐 Optional width/height attributes"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Image Example",
+            "description": "Proper way to embed images:",
+            "code": "<‎img src=\"puppy.jpg\" \nalt=\"Cute golden retriever puppy\" \nwidth=\"300\"‎>",
+            "footer": "Always include alt text for screen readers!"
+        },
+        {
+            "type": "content",
+            "title": "HTML Links",
+            "content": "The hyper in hypertext - connecting pages",
+            "list": [
+                "🔗 Created with <‎a‎> (anchor) tag",
+                "🌐 href attribute specifies destination",
+                "📌 Can link to pages, emails, or sections",
+                "🖱️ What makes the web interconnected"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "HTML Forms",
+            "content": "Collecting user input on websites",
+            "list": [
+                "📝 Created with <‎form‎> tag",
+                "🖊️ Used for logins, searches, surveys",
+                "📤 Needs action and method attributes",
+                "🖱️ Contains various input elements"
+            ],
+            "image": "https://example.com/images/html-form.png"
+        },
+        {
+            "type": "code",
+            "title": "Form Example",
+            "description": "Basic form structure:",
+            "code": "<‎form action=\"/submit\" method=\"post\"‎>\n  <‎label for=\"name\"‎>Name:<‎/label‎>\n  <‎input type=\"text\" id=\"name\" name=\"name\"‎>\n  <‎button type=\"submit\"‎>Send<‎/button‎>\n<‎/form‎>",
+            "footer": "Forms are essential for interactive websites"
+        },
+        {
+            "type": "content",
+            "title": "Form Elements",
+            "content": "Different types of form controls",
+            "list": [
+                "<‎input‎> = Many types (text, email, etc.)",
+                "<‎textarea‎> = Multi-line text",
+                "<‎select‎> = Dropdown options",
+                "<‎button‎> = Clickable buttons",
+                "<‎label‎> = Text descriptions",
+                "<‎fieldset‎> = Groups related elements"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "HTML Media",
+            "content": "Adding audio and video to web pages",
+            "list": [
+                "🎵 <‎audio‎> for sound clips",
+                "🎥 <‎video‎> for movie clips",
+                "📽️ Native HTML5 media support",
+                "⚙️ Includes controls attribute"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Video Example",
+            "description": "Embedding video with fallback:",
+            "code": "<‎video width=\"320\" controls>\n  <‎source src=\"movie.mp4\" type=\"video/mp4\"‎>\n  Your browser doesn't support videos.\n<‎/video‎>",
+            "footer": "Always provide fallback content"
+        },
+        {
+            "type": "content",
+            "title": "XHTML & XML",
+            "content": "Related markup languages",
+            "list": [
+                "XHTML = HTML as XML (stricter rules)",
+                "XML = Custom markup for data",
+                "All XHTML tags must be closed",
+                "Attributes must be quoted"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "HTML Best Practices",
+            "content": "Guidelines for quality HTML",
+            "list": [
+                "✅ Use semantic tags (<‎header‎>, <‎nav‎>)",
+                "✅ Always include alt text for images",
+                "✅ Close all tags properly",
+                "✅ Indent code for readability",
+                "✅ Validate your HTML",
+                "✅ Separate structure (HTML) from style (CSS)"
+            ],
+            "footer": "HTML is for structure, CSS for style, JS for behavior"
+        },
+        {
+            "type": "content",
+            "title": "Conclusion",
+            "content": "You now understand web fundamentals!",
+            "list": [
+                "🌐 How internet and web work",
+                "🏗️ HTML page structure",
+                "📝 Forms and user input",
+                "🎥 Media embedding",
+                "📐 Best practices"
+            ],
+            "footer": "Try building your first webpage today!"
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Presentation System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <header>
+            <h1>P ELEC 2 - WEB SYSTEMS AND TECHNOLOGIES</h1>
+            <p>Start Your Lesson Below!</p>
+        </header>
+        
+        <div id="presentations-container" class="presentations-grid">
+            <!-- Presentations will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <!-- Presentation Page -->
+    <div id="presentation-page" class="page">
+        <header class="presentation-header">
+            <button id="back-to-home" class="nav-button">
+                <i class="fas fa-home"></i>
+            </button>
+            <div class="presentation-info">
+                <h2 id="presentation-title"></h2>
+                <div class="slide-counter">
+                    <span id="current-slide">1</span> / <span id="total-slides">0</span>
+                </div>
+            </div>
+            <div class="progress-container">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+        </header>
+
+        <main class="slide-container">
+            <button id="prev-slide" class="slide-nav-button prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div id="slide-content" class="slide-content">
+                <!-- Slide content will be dynamically loaded here -->
+            </div>
+            
+            <button id="next-slide" class="slide-nav-button next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </main>
+
+        <footer class="presentation-footer">
+            <div id="slide-navigation" class="slide-navigation">
+                <!-- Slide navigation dots will be added here -->
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

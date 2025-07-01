@@ -1,0 +1,344 @@
+{
+    "title": "JavaScript Mastery: From Basics to Advanced",
+    "description": "Complete guide to JavaScript including fundamentals, objects, functions, and classes",
+    "author": "Jimf Bocales",
+    "thumbnail": "Assets/p1.jpg",
+    "slides": [
+        {
+            "type": "title",
+            "title": "JavaScript Mastery",
+            "subtitle": "From Basics to Advanced Concepts",
+            "content": "A complete journey through JavaScript programming",
+            "footer": "Presented by Jimf Bocales"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Introduction",
+            "content": "High-level, interpreted programming language for the web",
+            "list": [
+                "🌐 Runs in browsers and servers (Node.js)",
+                "🚀 Dynamic, multi-paradigm language",
+                "💡 Weakly typed with dynamic typing",
+                "⚡ Just-In-Time compiled"
+            ],
+            "image": "https://example.com/images/js-concept.png"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Syntax",
+            "content": "Basic rules for writing JavaScript code",
+            "list": [
+                "📝 Statements end with semicolons (optional)",
+                "🔤 Case sensitive",
+                "📜 Uses Unicode character set",
+                "💬 Two comment styles: // and /* */"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Syntax Examples",
+            "description": "Basic JavaScript syntax elements:",
+            "code": "// Single-line comment\n/* Multi-line\n   comment */\n\nlet message = 'Hello';  // Statement\nconsole.log(message);  // Function call",
+            "footer": "Consistent syntax makes code more readable"
+        },
+        {
+            "type": "content",
+            "title": "Variables",
+            "content": "Containers for storing data values",
+            "list": [
+                "📦 var (function-scoped, hoisted)",
+                "📌 let (block-scoped, can be updated)",
+                "🔒 const (block-scoped, constant)",
+                "🚫 Avoid global variables"
+            ],
+            "image": "https://example.com/images/js-variables.png"
+        },
+        {
+            "type": "code",
+            "title": "Variable Examples",
+            "description": "Different ways to declare variables:",
+            "code": "var oldWay = 'deprecated';\nlet count = 10;       // Can be changed\nconst PI = 3.14159;  // Cannot be changed\n\ncount = 20;  // Valid\nPI = 3;      // Error!",
+            "footer": "Prefer const by default, use let when needed"
+        },
+        {
+            "type": "content",
+            "title": "Operators",
+            "content": "Perform operations on variables and values",
+            "list": [
+                "➕ Arithmetic (+, -, *, /, %)",
+                "🔄 Assignment (=, +=, -=)",
+                "🤔 Comparison (==, ===, !=, !==)",
+                "🔀 Logical (&&, ||, !)",
+                "🎯 Ternary (?:)"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Operator Examples",
+            "description": "Common JavaScript operators:",
+            "code": "let sum = 10 + 5;       // 15\nlet isTrue = 5 === '5'; // false\nlet access = age > 18 ? 'granted' : 'denied';\n\n// Logical AND\nif (isLoggedIn && hasPermission) {\n    // Do something\n}",
+            "footer": "Always use === for strict equality checks"
+        },
+        {
+            "type": "content",
+            "title": "Data Types",
+            "content": "Different kinds of values in JavaScript",
+            "list": [
+                "🔢 Primitive: String, Number, Boolean, Null, Undefined, Symbol, BigInt",
+                "🏗️ Object: Object, Array, Date, etc.",
+                "🔄 Dynamic typing (variables can change type)"
+            ],
+            "image": "https://example.com/images/js-datatypes.png"
+        },
+        {
+            "type": "content",
+            "title": "Array Methods",
+            "content": "Built-in functions for array manipulation",
+            "list": [
+                "📜 map() - Transform each item",
+                "🔍 filter() - Select items",
+                "🔄 reduce() - Accumulate values",
+                "🧩 find() - Find first match",
+                "📌 push()/pop() - Add/remove from end"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Array Method Examples",
+            "description": "Common array operations:",
+            "code": "const numbers = [1, 2, 3];\n\n// Map: double each number\nconst doubled = numbers.map(n => n * 2);\n\n// Filter: get even numbers\nconst evens = numbers.filter(n => n % 2 === 0);\n\n// Reduce: sum all numbers\nconst sum = numbers.reduce((total, n) => total + n, 0);",
+            "footer": "Array methods enable functional programming style"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Objects",
+            "content": "Collections of key-value pairs",
+            "list": [
+                "📦 Store related data and functionality",
+                "🔑 Keys are strings (or Symbols)",
+                "💎 Values can be any data type",
+                "🏗️ Created with {} or new Object()"
+            ],
+            "image": "https://example.com/images/js-objects.png"
+        },
+        {
+            "type": "code",
+            "title": "Object Example",
+            "description": "Creating and accessing object properties:",
+            "code": "const person = {\n    name: 'Alice',\n    age: 30,\n    greet() {\n        console.log(`Hello, I'm ${this.name}`);\n    }\n};\n\nconsole.log(person.name);  // 'Alice'\nperson.greet();            // Calls method",
+            "footer": "Objects group related data and behavior"
+        },
+        {
+            "type": "content",
+            "title": "Object Methods & Accessors",
+            "content": "Functions and special properties in objects",
+            "list": [
+                "⚙️ Methods = Functions as property values",
+                "🔑 Getters (get) - Access properties",
+                "🔒 Setters (set) - Change properties",
+                "💡 this keyword refers to the object"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "Object Constructors & Prototypes",
+            "content": "Creating object blueprints",
+            "list": [
+                "🏗️ Constructor functions (capitalized)",
+                "🧬 Prototypes - Shared properties/methods",
+                "🔗 Prototype chain - Inheritance mechanism",
+                "🔄 Modern alternative: Classes"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Constructor Example",
+            "description": "Creating objects with constructors:",
+            "code": "function Person(name, age) {\n    this.name = name;\n    this.age = age;\n}\n\n// Add method to prototype\nPerson.prototype.greet = function() {\n    console.log(`Hello, I'm ${this.name}`);\n};\n\nconst alice = new Person('Alice', 30);\nalice.greet();",
+            "footer": "new keyword creates new object instances"
+        },
+        {
+            "type": "content",
+            "title": "Iterables, Sets, and Maps",
+            "content": "Special collection types",
+            "list": [
+                "🔄 Iterables - Objects with [Symbol.iterator]",
+                "🎯 Set - Collection of unique values",
+                "🗺️ Map - Key-value pairs (keys can be any type)",
+                "📌 WeakSet/WeakMap - Garbage-collectable versions"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Set and Map Examples",
+            "description": "Working with special collections:",
+            "code": "// Set - Unique values\nconst colors = new Set(['red', 'green', 'red']);\ncolors.add('blue');\n\n// Map - Key-value pairs\nconst userMap = new Map();\nuserMap.set('name', 'Alice');\nuserMap.set(1, 'ID');\n\nconsole.log(colors.size);    // 3 (duplicate 'red' ignored)\nconsole.log(userMap.get(1)); // 'ID'",
+            "footer": "Use when you need special collection behaviors"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Functions",
+            "content": "Reusable blocks of code",
+            "list": [
+                "📜 Can be declared or expressed",
+                "🔄 Accept parameters (arguments)",
+                "💎 Can return values",
+                "🏗️ First-class objects (can be assigned, passed)"
+            ],
+            "image": "https://example.com/images/js-functions.png"
+        },
+        {
+            "type": "code",
+            "title": "Function Examples",
+            "description": "Different function declaration styles:",
+            "code": "// Function declaration\nfunction add(a, b) {\n    return a + b;\n}\n\n// Function expression\nconst multiply = function(a, b) {\n    return a * b;\n};\n\n// Arrow function (ES6+)\nconst square = x => x * x;",
+            "footer": "Arrow functions have lexical this binding"
+        },
+        {
+            "type": "content",
+            "title": "Function Parameters",
+            "content": "Ways to pass data to functions",
+            "list": [
+                "📌 Positional parameters",
+                "💎 Default parameters (ES6)",
+                "🎯 Rest parameters (...args)",
+                "📦 Arguments object (array-like)"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Parameter Examples",
+            "description": "Flexible parameter handling:",
+            "code": "// Default parameters\nfunction greet(name = 'Guest') {\n    console.log(`Hello ${name}`);\n}\n\n// Rest parameters\nfunction sum(...numbers) {\n    return numbers.reduce((total, n) => total + n, 0);\n}\n\ngreet();          // 'Hello Guest'\nsum(1, 2, 3);     // 6",
+            "footer": "Rest parameters collect all remaining arguments"
+        },
+        {
+            "type": "content",
+            "title": "Function Invocation",
+            "content": "Different ways to call functions",
+            "list": [
+                "📜 As functions (direct call)",
+                "🏗️ As methods (on objects)",
+                "🆕 As constructors (with new)",
+                "🎯 Indirectly (call/apply/bind)"
+            ]
+        },
+        {
+            "type": "content",
+            "title": "call, apply, bind",
+            "content": "Methods to control function context (this)",
+            "list": [
+                "📞 call() - Calls with given this and arguments",
+                "📋 apply() - Similar but takes array of args",
+                "🔗 bind() - Creates new function with bound this",
+                "💡 Arrow functions inherit this lexically"
+            ],
+            "image": "https://example.com/images/js-this.png"
+        },
+        {
+            "type": "code",
+            "title": "call/apply/bind Examples",
+            "description": "Controlling function context:",
+            "code": "const person = { name: 'Alice' };\n\nfunction greet(greeting) {\n    console.log(`${greeting}, ${this.name}`);\n}\n\ngreet.call(person, 'Hello');      // 'Hello, Alice'\ngreet.apply(person, ['Hi']);     // 'Hi, Alice'\n\nconst boundGreet = greet.bind(person);\nboundGreet('Hey');               // 'Hey, Alice'",
+            "footer": "Essential for working with this context"
+        },
+        {
+            "type": "content",
+            "title": "Closures",
+            "content": "Functions that remember their environment",
+            "list": [
+                "📦 Inner functions access outer scope",
+                "💾 Variables are \"remembered\"",
+                "🔒 Enables data privacy",
+                "🔄 Common in callbacks and event handlers"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Closure Example",
+            "description": "Creating private variables with closures:",
+            "code": "function createCounter() {\n    let count = 0;  // Private variable\n    \n    return {\n        increment() { count++; },\n        getCount() { return count; }\n    };\n}\n\nconst counter = createCounter();\ncounter.increment();\nconsole.log(counter.getCount()); // 1",
+            "footer": "Powerful pattern for encapsulation"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Classes",
+            "content": "Syntactic sugar over prototypes (ES6)",
+            "list": [
+                "🏗️ class syntax for OOP",
+                "🆕 constructor for initialization",
+                "🧬 extends for inheritance",
+                "⚙️ Methods are added to prototype"
+            ],
+            "image": "https://example.com/images/js-classes.png"
+        },
+        {
+            "type": "code",
+            "title": "Class Example",
+            "description": "Basic class definition:",
+            "code": "class Person {\n    constructor(name, age) {\n        this.name = name;\n        this.age = age;\n    }\n    \n    greet() {\n        console.log(`Hello, I'm ${this.name}`);\n    }\n}\n\nconst alice = new Person('Alice', 30);\nalice.greet();",
+            "footer": "Classes make OOP patterns more intuitive"
+        },
+        {
+            "type": "content",
+            "title": "Inheritance",
+            "content": "Creating class hierarchies",
+            "list": [
+                "🧬 extends establishes inheritance",
+                "🆕 super calls parent constructor",
+                "🔗 Method overriding supported",
+                "💡 Prototype chain still used under the hood"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Inheritance Example",
+            "description": "Extending a base class:",
+            "code": "class Animal {\n    constructor(name) {\n        this.name = name;\n    }\n    \n    speak() {\n        console.log(`${this.name} makes a noise`);\n    }\n}\n\nclass Dog extends Animal {\n    speak() {\n        console.log(`${this.name} barks`);\n    }\n}\n\nconst dog = new Dog('Rex');\ndog.speak();  // 'Rex barks'",
+            "footer": "Inheritance enables code reuse"
+        },
+        {
+            "type": "content",
+            "title": "Static Methods",
+            "content": "Class-level (not instance) methods",
+            "list": [
+                "⚙️ Called on the class, not instances",
+                "📦 Often used for utility functions",
+                "💡 No access to instance properties",
+                "🏗️ Defined with static keyword"
+            ]
+        },
+        {
+            "type": "code",
+            "title": "Static Method Example",
+            "description": "Creating utility methods:",
+            "code": "class MathUtils {\n    static square(x) {\n        return x * x;\n    }\n    \n    static cube(x) {\n        return x * x * x;\n    }\n}\n\nconsole.log(MathUtils.square(3));  // 9\nconsole.log(MathUtils.cube(3));    // 27",
+            "footer": "Useful for organization without instantiation"
+        },
+        {
+            "type": "content",
+            "title": "JavaScript Best Practices",
+            "content": "Guidelines for writing quality JS",
+            "list": [
+                "✅ Use const/let instead of var",
+                "✅ Follow consistent naming conventions",
+                "✅ Modularize code with functions/classes",
+                "✅ Handle errors properly",
+                "✅ Write clean, readable code"
+            ],
+            "footer": "JavaScript is powerful - use it wisely!"
+        },
+        {
+            "type": "content",
+            "title": "Conclusion",
+            "content": "You now have JavaScript superpowers!",
+            "list": [
+                "🎯 From syntax to advanced concepts",
+                "🏗️ Object-oriented programming",
+                "🔗 Functional programming patterns",
+                "🚀 Modern ES6+ features"
+            ],
+            "footer": "Go build something amazing!"
+        }
+    ]
+}
